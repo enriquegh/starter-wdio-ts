@@ -16,7 +16,7 @@ exports.config = {
     runner: 'local',
     user: process.env.SAUCE_USERNAME,
     key: process.env.SAUCE_ACCESS_KEY,
-    sauceConnect: true,
+    // sauceConnect: true,
     
     
     specs: [
@@ -41,13 +41,6 @@ exports.config = {
     framework: 'mocha',
     reporters: [
         'spec',
-        ['junit', {
-            outputDir: './junit_xml/',
-            outputFileFormat: function(options) {
-                return `wdio-results-${options.cid}.xml`
-            }
-        }]
-
     ],
     
     //
