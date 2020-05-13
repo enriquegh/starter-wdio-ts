@@ -22,6 +22,7 @@
     "webdriverio": "^5.10.0"
   },
   "scripts": {
+    "clean": "rm -rf node_modules",
     "test": "wdio"
   },
   "author": "Enrique Gonzalez",
