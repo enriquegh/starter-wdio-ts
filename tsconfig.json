@@ -5,7 +5,7 @@
             "*": [ "./*" ],
             "src/*": ["./src/*"]
         },
-        "types": ["node", "webdriverio/sync", "@types/mocha", "@wdio/mocha-framework"]
+        "types": ["node", "webdriverio/sync", "@types/mocha", "@wdio/mocha-framework", "expect-webdriverio"]
     },
     "include": [
         "./tests/**/*.ts"
