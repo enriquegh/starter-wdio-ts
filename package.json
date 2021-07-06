@@ -21,7 +21,7 @@
   },
   "scripts": {
     "clean": "rm -rf node_modules",
-    "test": "wdio"
+    "test": "wdio wdio.conf.ts"
   },
   "author": "Enrique Gonzalez",
   "license": "ISC",
