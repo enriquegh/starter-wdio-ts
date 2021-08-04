@@ -1,11 +1,19 @@
 {
     "compilerOptions": {
+        "outDir": "./.tsbuild/",
+        "sourceMap": false,
+        "target": "es2019",
+        "module": "commonjs",
+        "removeComments": true,
+        "noImplicitAny": true,
+        "strictPropertyInitialization": true,
+        "strictNullChecks": true,
         "baseUrl": ".",
         "paths": {
             "*": [ "./*" ],
             "src/*": ["./src/*"]
         },
-        "types": ["node", "webdriverio/sync", "@types/mocha", "@wdio/mocha-framework", "expect-webdriverio"]
+        "types": ["node", "webdriverio/async", "@types/mocha", "@wdio/mocha-framework", "expect-webdriverio"]
     },
     "include": [
         "./tests/**/*.ts",

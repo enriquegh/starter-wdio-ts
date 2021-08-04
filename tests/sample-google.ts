@@ -1,11 +1,11 @@
 describe("Google Test", () => {
-    it("should go to google and click Sauce Labs", () => {
-        browser.url("https://google.com");
+    it("should go to google and click Sauce Labs", async () => {
+        await browser.url("https://google.com");
 
-        const searchBar = $("[name='q']")
+        const searchBar = await $("[name='q']")
         
-        searchBar.setValue("Sauce Labs");
-        searchBar.click();
+        await searchBar.setValue("Sauce Labs");
+        await searchBar.click();
     
     })
 
