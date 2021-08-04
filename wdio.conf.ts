@@ -25,9 +25,7 @@ const config: WebdriverIO.Config  = {
     },
 
     user: process.env.SAUCE_USERNAME,
-    key: process.env.SAUCE_ACCESS_KEY,
-    // sauceConnect: true,
-    
+    key: process.env.SAUCE_ACCESS_KEY,    
     
     specs: [
         './tests/*.ts'
@@ -40,10 +38,6 @@ const config: WebdriverIO.Config  = {
     maxInstances: 20,
     capabilities: cloneCapabilities(baseCapability, NUM_OF_INSTANCES),
     logLevel: 'debug',
-    // logLevels: {
-        // webdriver: 'info',
-        // 'wdio-applitools-service': 'info'
-    // },
     waitforTimeout: 10000,
     connectionRetryTimeout: 90000,
     connectionRetryCount: 0,
@@ -61,8 +55,6 @@ const config: WebdriverIO.Config  = {
         compilers: ['ts:ts-node/register'], 
     },
 
-    before: function (capabilities, specs) {
-    },
 }
 
 export { config }
