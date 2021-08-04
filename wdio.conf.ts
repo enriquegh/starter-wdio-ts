@@ -4,7 +4,7 @@ import { cloneCapabilities } from "./utils";
 const NUM_OF_INSTANCES = process.env.WDIO_CAP_MULTIPLIER || 5;
 const baseCapability = {
 
-    platformName:"macOS 10.13",
+    platformName:"macOS 11",
     browserName: 'googlechrome',
     browserVersion: 'latest',
 }
