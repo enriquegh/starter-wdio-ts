@@ -5,7 +5,7 @@ const date: Date = new Date();
 const NUM_OF_INSTANCES: Number = process.env.WDIO_CAP_MULTIPLIER || 5;
 const baseCapability = {
 
-    platformName:"macOS 11",
+    platformName:"Windows 10",
     browserName: 'googlechrome',
     browserVersion: 'latest',
     'sauce:options': {
