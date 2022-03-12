@@ -1,12 +1,16 @@
 import { cloneCapabilities } from "./utils";
 
 // process.env.NODE_DEBUG = "request";
-const NUM_OF_INSTANCES = process.env.WDIO_CAP_MULTIPLIER || 5;
+const date: Date = new Date();
+const NUM_OF_INSTANCES: Number = process.env.WDIO_CAP_MULTIPLIER || 5;
 const baseCapability = {
 
     platformName:"macOS 11",
     browserName: 'googlechrome',
     browserVersion: 'latest',
+    'sauce:options': {
+        build: process.env.SAUCE_BUILD_NAME ? process.env.SAUCE_BUILD_NAME : `sample-wdio-ts-${date.toISOString()}`
+    }
 }
 
 const config: WebdriverIO.Config  = {
