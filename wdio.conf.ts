@@ -9,7 +9,8 @@ const baseCapability = {
     browserName: 'googlechrome',
     browserVersion: 'latest',
     'sauce:options': {
-        build: process.env.SAUCE_BUILD_NAME ? process.env.SAUCE_BUILD_NAME : `sample-wdio-ts-${date.toISOString()}`
+        build: process.env.SAUCE_BUILD_NAME ? process.env.SAUCE_BUILD_NAME : `sample-wdio-ts-${date.toISOString()}`,
+        tunnelIdentifier: process.env.TUNNEL_IDENTIFIER
     }
 }
 
