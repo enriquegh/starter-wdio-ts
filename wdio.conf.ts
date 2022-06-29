@@ -10,7 +10,7 @@ const baseCapability = {
     browserVersion: 'latest',
     'sauce:options': {
         build: process.env.SAUCE_BUILD_NAME ? process.env.SAUCE_BUILD_NAME : `sample-wdio-ts-${date.toISOString()}`,
-        tunnelIdentifier: process.env.TUNNEL_IDENTIFIER
+        tunnelIdentifier: process.env.TUNNEL_IDENTIFIER ? process.env.TUNNEL_IDENTIFIER : process.env.TUNNEL_NAME,
     }
 }
 
